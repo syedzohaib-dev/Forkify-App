@@ -38,11 +38,11 @@ async function checkForRecipes(item) {
 
             // Display detailed recipe information
             recipe.innerHTML = `
+             <img src="${recipeData.data.recipe.image_url}" style="width:600px; height:50%;" alt="Recipe Image">
                 <h2>${recipeData.data.recipe.title}</h2>
                 <p><strong>Publisher:</strong> ${recipeData.data.recipe.publisher}</p>
                 <p><i class="fa-regular fa-clock"></i><strong> Cooking Time:</strong> ${recipeData.data.recipe.cooking_time} minutes</p>
                 <p><i class="fa-solid fa-person"></i><strong> Servings:</strong> ${recipeData.data.recipe.servings}</p>
-                <img src="${recipeData.data.recipe.image_url}" style="width:600px; height:50%;" alt="Recipe Image">
                 <p style="color:orange;"><strong>RECIPE INGREDIENTS: </strong></p>
                 <ul class="ingredients-list">
                     ${recipeData.data.recipe.ingredients.map(ingredient => `
